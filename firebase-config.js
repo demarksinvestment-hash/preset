@@ -6,5 +6,5 @@ const firebaseConfig = {
   projectId: "styl-dashboard",
   storageBucket: "styl-dashboard.firebasestorage.app",
   messagingSenderId: "460129381983",
-  appId: "1:460129381983:web:27c087a53a002c566f35ea"
+  appId: "1:460129381983:web:8c428c17ce87bc746f35ea"
 };
