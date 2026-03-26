@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STYL Live Admin</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="admin-screen">
+    <section class="admin-shell">
+      <section class="admin-card">
+        <h1>STYL Live Admin</h1>
+        <div class="step-box" id="liveStatus" style="margin-top:12px;">Waiting for Firebase connection...</div>
+
+        <div class="step-box" style="margin-top:14px;">
+          <strong>Quick Presets</strong>
+          <div class="admin-actions" style="margin-top:12px;">
+            <button class="admin-btn" id="presetAbcBtn" type="button">ABC News</button>
+            <button class="admin-btn" id="presetSportsBtn" type="button">Sports Feed</button>
+            <button class="admin-btn" id="presetMusicBtn" type="button">Executive Music</button>
+          </div>
+          <div class="mini-help" style="margin-top:8px;">
+            Preset buttons update the dashboard instantly. No copy-paste needed.
+          </div>
+        </div>
+
+        <div class="admin-grid" style="margin-top:16px;">
+          <div class="admin-field"><label>Guest Name</label><input id="guestName" value="Guest" /></div>
+          <div class="admin-field"><label>Trip</label><input id="trip" value="Luxury Ride" /></div>
+          <div class="admin-field"><label>Chauffeur</label><input id="chauffeurName" value="Ayo" /></div>
+          <div class="admin-field"><label>Vehicle</label><input id="vehicleName" value="Chevrolet Suburban" /></div>
+          <div class="admin-field"><label>Music Mode</label>
+            <select id="mode">
+              <option value="executive">Executive</option>
+              <option value="vibe">Vibe</option>
+              <option value="party">Party</option>
+            </select>
+          </div>
+          <div class="admin-field full"><label>Welcome Note</label><input id="welcomeNote" value="Your STYL luxury experience is ready." /></div>
+          <div class="admin-field full"><label>News Embed Link</label><input id="newsUrl" value="https://www.youtube.com/embed/lHxuE0Qf7sg?autoplay=1&rel=0" /></div>
+          <div class="admin-field full"><label>Sports Embed Link</label><input id="sportsUrl" value="https://www.youtube.com/embed/videoseries?list=PLFgquLnL59alGJcdc0BEZJb2p7IgkL0Oe" /></div>
+          <div class="admin-field full"><label>VIP Form Link</label><input id="vipFormUrl" value="https://stylblackcar.com/contact/" /></div>
+          <div class="admin-field full"><label>Booking Link</label><input id="bookingUrl" value="https://stylblackcar.com/" /></div>
+        </div>
+
+        <div class="admin-actions">
+          <button class="admin-btn" id="saveLiveBtn" type="button">Save Live Profile</button>
+          <button class="admin-btn" id="copyNewsBtn" type="button">Copy News Link</button>
+          <button class="admin-btn" id="copySportsBtn" type="button">Copy Sports Link</button>
+        </div>
+      </section>
+
+      <section class="preview-card">
+        <h2>Preview</h2>
+        <div class="preview-box">
+          <div><strong>Current greeting</strong></div>
+          <div id="previewGreeting">Good afternoon Guest</div>
+          <div><strong>Live payload</strong></div>
+          <pre class="code-box" id="jsonOutput"></pre>
+        </div>
+      </section>
+    </section>
+  </main>
+  <script type="module" src="admin-firebase.js"></script>
+</body>
+</html>
